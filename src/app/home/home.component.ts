@@ -13,7 +13,9 @@ export class HomeComponent {
 
   randomize(): void {
     this.wishers = this.wishersInput.split('\n');
-    this.wishersPairs = [...this.wishers].sort(() => Math.random() - 0.5);
+    this.wishersPairs = [...this.wishers]
+      .map((w, i) => String(i + 1))
+      .sort(() => Math.random() - 0.5);
     this.wishersPairsInput = this.wishersPairs.join('\n');
   }
 
