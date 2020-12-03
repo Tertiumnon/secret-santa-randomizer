@@ -1,7 +1,22 @@
 <div class="container">
   <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
+    {{ "PAGES.HOME.TITLE" | translate }}
   </h1>
 
-  <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+  <div class="formInputs">
+    <textarea
+      class="user-list"
+      [(ngModel)]="wishersInput"
+    ></textarea>
+    <textarea
+      class="user-list"
+      [(ngModel)]="wishersPairsInput"
+    ></textarea>
+  </div>
+
+  <div>
+    <button type="button" (click)="randomize()">Randomize It!</button>
+  </div>
+
+  <!-- <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a> -->
 </div>

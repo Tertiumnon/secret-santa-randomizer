@@ -1,3 +1,11 @@
-:host {
-  
+.formInputs {
+  display: flex;
+  height: 70%;
+  width: 90%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  .user-list {
+    width: 49%;
+  }
 }
