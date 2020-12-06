@@ -4,20 +4,15 @@
     {{ "PAGES.HOME.TITLE" | translate }}
   </h1>
 
-  <div class="formInputs">
-    <textarea
-      class="user-list"
-      [(ngModel)]="wishersInput"
-    ></textarea>
-    <textarea
-      class="user-list"
-      [(ngModel)]="wishersPairsInput"
-    ></textarea>
-  </div>
+  <div><input type="text" placeholder="Введите код" [(ngModel)]="code"></div>
 
-  <div>
-    <button type="button" (click)="randomize()">Give gifts them all!</button>
-  </div>
+  <div><button type="button" (click)="getWisher()">Получить данные</button></div>
 
-  <!-- <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a> -->
+  <p>
+    {{wisher}}
+  </p>
+
+  <p>
+    <a routerLink="/data-generator">{{ 'PAGES.DATA-GENERATOR.TITLE' | translate }}</a>
+  </p>
 </div>

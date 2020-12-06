@@ -1,0 +1,31 @@
+<div class="container">
+  <img src="/assets/santa.jpg" class="santa" alt="">
+  <h1 class="title">
+    {{ "PAGES.DATA-GENERATOR.TITLE" | translate }}
+  </h1>
+
+  <div class="formInputs">
+    <textarea
+      class="wisher-list"
+      [(ngModel)]="wishersInput"
+    ></textarea>
+    <textarea
+      class="wisher-list"
+      [(ngModel)]="wishersPairsInput"
+    ></textarea>
+    <textarea
+      class="wisher-list"
+      [(ngModel)]="wishersPairsOutput"
+    ></textarea>
+  </div>
+
+  <div>
+    <button type="button" (click)="randomize()">Give gifts them all!</button>
+  </div>
+
+  <p>
+    <a href="/">Back to Home</a>
+  </p>
+
+  <!-- <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a> -->
+</div>

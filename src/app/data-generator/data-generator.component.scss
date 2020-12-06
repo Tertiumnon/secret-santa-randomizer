@@ -1,17 +1,11 @@
-.santa {
-  height: 10%;
-  position: absolute;
-  top: 10px;
-}
-
 .formInputs {
   display: flex;
-  height: 70%;
+  height: 50%;
   width: 90%;
   justify-content: space-between;
   margin-bottom: 1rem;
 
   .wisher-list {
-    width: 49%;
+    width: 33%;
   }
 }

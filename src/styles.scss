@@ -20,6 +20,12 @@ html, body {
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: cover; /* version standardisée */
 
+  .santa {
+    height: 10%;
+    position: absolute;
+    top: 10px;
+  }
+
   .title {
     color: white;
     margin: 0;
@@ -27,6 +33,11 @@ html, body {
   }
 
   a {
+    color: white;
+  }
+
+  button {
+    cursor: pointer;
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
