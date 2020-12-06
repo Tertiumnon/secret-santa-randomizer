@@ -48,3 +48,5 @@ package-lock.json
 # System Files
 .DS_Store
 Thumbs.db
+src/assets/wisher-list.json
+src/assets/wisher-pairs.json
