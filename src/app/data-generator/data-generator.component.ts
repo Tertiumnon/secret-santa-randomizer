@@ -33,16 +33,20 @@ export class DataGeneratorComponent implements OnInit {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
-  generatePairs(ids: number[]): number[] {
-    const idsCopy = [...ids];
+  generatePairIds(ids: number[]): number[] {
+    const pairIds = [...ids].sort(() => 0.5 - Math.random());
     const res: number[] = [];
-    idsCopy.forEach((i) => {
-      const pairI = this.getRandomInt(i === 0 ? 1 : 0, ids.length);
-      console.log(pairI)
-      res.push(ids[pairI]);
-      ids.splice(pairI, 1);
-      console.log(ids)
-    });
+    const l = ids.length;
+    for (let i = 0; i < l; i += 1) {
+      if (ids[i] !== pairIds[pairIds.length - 1]) {
+        res.push(pairIds.pop());
+      } else {
+        res.push(pairIds.shift());
+      }
+    }
+    if (ids[ids.length - 1] === res[res.length - 1]) {
+      return this.generatePairIds(ids);
+    }
     return res;
   }
 
@@ -57,7 +61,7 @@ export class DataGeneratorComponent implements OnInit {
   }
 
   randomize(): void {
-    this.wishersPairIds = this.generatePairs(
+    this.wishersPairIds = this.generatePairIds(
       [...this.wishers].map((w, i) => i)
     );
     console.log(this.wishersPairIds)
