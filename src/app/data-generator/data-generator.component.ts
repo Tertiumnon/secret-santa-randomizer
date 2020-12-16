@@ -64,7 +64,6 @@ export class DataGeneratorComponent implements OnInit {
     this.wishersPairIds = this.generatePairIds(
       [...this.wishers].map((w, i) => i)
     );
-    console.log(this.wishersPairIds)
     this.wishersPairs = this.wishers.map((w, i) => {
       return {
         id: i,

@@ -1,18 +1,25 @@
 <div class="container">
-  <img src="/assets/santa.jpg" class="santa" alt="">
+  <img src="/assets/santa.png" class="santa" alt="" />
   <h1 class="title">
     {{ "PAGES.HOME.TITLE" | translate }}
   </h1>
 
-  <div><input type="text" placeholder="Введите код" [(ngModel)]="code"></div>
+  <div class="input-wrapper">
+    <input class="code" type="text" placeholder="Введите код" [(ngModel)]="code" />
+  </div>
 
-  <div><button type="button" (click)="getWisher()">Получить данные</button></div>
+  <div class="btn-wrapper">
+    <img src="/assets/candle.svg" alt="" />
+    <button type="button" (click)="getWisher()">Получить данные</button>
+  </div>
 
   <p>
-    {{wisher}}
+    {{ wisher }}
   </p>
 
   <p>
-    <a routerLink="/data-generator">{{ 'PAGES.DATA-GENERATOR.TITLE' | translate }}</a>
+    <a routerLink="/data-generator">{{
+      "PAGES.DATA-GENERATOR.TITLE" | translate
+    }}</a>
   </p>
 </div>
