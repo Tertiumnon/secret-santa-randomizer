@@ -32,6 +32,6 @@ export class HomeComponent implements OnInit {
   getWisher(): void {
     const wisherPair = this.wisherPairs.find(w => w.code === this.code);
     const wisher = this.wishers.find((w, i) => i === wisherPair.pairId);
-    this.wisher = JSON.stringify(wisher.address);
+    this.wisher = wisher.name;
   }
 }

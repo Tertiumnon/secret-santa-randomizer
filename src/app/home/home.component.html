@@ -5,15 +5,22 @@
   </h1>
 
   <div class="input-wrapper">
-    <input class="code" type="text" placeholder="Введите код" [(ngModel)]="code" />
+    <input
+      class="code"
+      type="text"
+      placeholder="Введите секретный код"
+      [(ngModel)]="code"
+    />
   </div>
 
   <div class="btn-wrapper">
-    <img src="/assets/candle.svg" alt="" />
-    <button type="button" (click)="getWisher()">Получить данные</button>
+    <button type="button" (click)="getWisher()">
+      <img src="/assets/candle.svg" alt="" /> Узнать кому дарить
+    </button>
   </div>
 
-  <p>
+  <p *ngIf="wisher" class="whisher">
+    <small>Ваш одариваемый(ая):</small><br /><br />
     {{ wisher }}
   </p>
 

@@ -1,7 +1,11 @@
 .santa {
-  height: 10%;
+  height: 20%;
   position: absolute;
   top: 10px;
+}
+
+.title {
+  font-family: "Seymour One", sans-serif;
 }
 
 .formInputs {
@@ -19,13 +23,28 @@
 .code {
   height: 50px;
   margin-bottom: 0.5em;
+  border-radius: 6px;
+  border: 1px solid yellow;
+  padding: 0 1em;
 }
 
 .btn-wrapper {
-  display: flex;
-  align-items: center;
+  button {
+    display: flex;
+    align-items: center;
 
-  img {
-    margin-right: 0.5em;
+    img {
+      margin-right: 0.5em;
+      height: 30px;
+    }
   }
+}
+
+
+.whisher {
+  color: white;
+  font-family: "Seymour One", sans-serif;
+  font-size: 1.4em;
+  margin: 2em 0;
+  text-align: center;
 }
